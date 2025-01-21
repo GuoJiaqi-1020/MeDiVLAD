@@ -1,0 +1,9 @@
+Training started at 2025-01-16 18:09:33
+
+Free space on disk: 47.779327392578125 GB
+
+--------------Parameter Setting--------------
+Namespace(iters=100, epochs=100, CUDA=[0], batch_size=32, note='LUS', config='dino_train', fold=2, local_crops_number=10, dino_out_dim=65536, warmup_teacher_temp=0.04, teacher_temp=0.06, init_momentum=0.998, warmup_teacher_temp_epochs=5, load_pretrained_backbone=True, model_type='small', checkpoint='dino_deitsmall8_pretrain_full_checkpoint')
+----------------------------------------------
+Loading pre-trained model: dino_deitsmall8_pretrain_full_checkpoint
+Loading pre-trained model: dino_deitsmall8_pretrain_full_checkpoint

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4111eb03-7b0c-4e5d-8c7d-6ded9c2d41b0" name="jgr9647@rhea.fsm.northwestern.edu">
+        <fileTransfer rootFolder="/home/jgr9647/MeDiVLAD" accessType="SFTP" host="rhea.fsm.northwestern.edu" port="22" sshConfigId="f4470285-8e93-40fe-9a19-693183b2558a" sshConfig="jgr9647@rhea.fsm.northwestern.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0d59a587-8aa9-4158-9375-a9ac4e558bdb" name="LUS">
+        <fileTransfer rootFolder="/home/jgr9647/LUS-dataset" accessType="SFTP" host="rhea.fsm.northwestern.edu" port="22" sshConfigId="f4470285-8e93-40fe-9a19-693183b2558a" sshConfig="jgr9647@rhea.fsm.northwestern.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="d516ccdb-5c69-4a3c-85d5-fbea290cd9c1" name="data">
+        <fileTransfer rootFolder="/data" accessType="SFTP" host="rhea.fsm.northwestern.edu" port="22" sshConfigId="f4470285-8e93-40fe-9a19-693183b2558a" sshConfig="jgr9647@rhea.fsm.northwestern.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

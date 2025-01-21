@@ -1,0 +1,27 @@
+wd: 0.1
+backbone_type: dino
+model_type: small  # choices: tiny, small(used in this paper), base, vit_tinyer
+
+dino_out_dim: 65536
+checkpoint: Teacher_DINO_IMGLUS_Acc67.49
+# Our Recommendation:
+# 1. Teacher_DINO_IMGLUS_Acc67.49: The results of label-free self-distillation using all data
+# Fold can be set to either fold1 or fold2, because model is trained without label
+# 2. VAL_F1_dino_acc_8013: Supervised fine-tuning based on self-distillation results. 
+#  (Fold1, with both backbone and classifier checkpoint)
+# 3. VAL_F2_dino_acc_8481: Supervised fine-tuning based on self-distillation results. 
+#  (Fold1, with both backbone and classifier checkpoint)
+
+fold: 2
+# Don't forget to change the fold accordingly (2-fold validation)
+
+train_classifier: True  # Flag to load a pre-trained model
+train_backbone: False  # Flag to train the backbone network
+# if both "train_classifier" and "train_backbone" are set to False,
+#  the program will shut down after calculating the KNN accuracy and running one round of validation.
+
+mean_std:
+  - [ 0.3261, 0.3261, 0.3261 ]
+  - [ 0.2283, 0.2283, 0.2283 ]
+sup_train_global_crops_scale:
+  !!python/tuple [0.2, 1.0]

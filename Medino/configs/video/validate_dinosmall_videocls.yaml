@@ -1,0 +1,24 @@
+wd: 0.00001
+dropout: 0.0
+backbone_type: dino
+model_type: small  # choices: tiny, small(used in this paper), base, vit_tinyer
+dino_out_dim: 65536
+input_size: 384
+hidden_size: 384
+seq_len: 15
+
+mean_std:
+  - [ 0.3261, 0.3261, 0.3261 ]
+  - [ 0.2283, 0.2283, 0.2283 ]
+sup_train_global_crops_scale:
+  !!python/tuple [0.2, 1.0]
+
+checkpoint: 'VAL_F1_dino_acc_8357.pth'
+# We offer checkpoints on 2-fold validation:
+# 1.  VAL_F1_dino_acc_8357
+# 2.  VAL_F2_dino_acc_8357
+
+fold: 1
+# Don't forget to change the fold accordingly (2-fold validation)
+
+vlad_centroid: centroid_VAL_F1_dino_acc_8013.pt

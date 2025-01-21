@@ -1,0 +1,31 @@
+Training started at 2025-01-16 18:11:27
+
+Free space on disk: 47.78032684326172 GB
+
+--------------Parameter Setting--------------
+Namespace(iters=100, epochs=100, CUDA=[0], batch_size=32, note='LUS', config='dino_train', fold=2, local_crops_number=10, dino_out_dim=65536, warmup_teacher_temp=0.04, teacher_temp=0.06, init_momentum=0.998, warmup_teacher_temp_epochs=5, load_pretrained_backbone=True, model_type='small', checkpoint='dino_deitsmall8_pretrain_full_checkpoint')
+----------------------------------------------
+Loading pre-trained model: dino_deitsmall8_pretrain_full_checkpoint
+Loading pre-trained model: dino_deitsmall8_pretrain_full_checkpoint
+*** Augmentation Details ***
+GCS: (0.6, 1.0)
+LCS: (0.1, 0.6)
+MEAN and STD for Norm: ([0.3261, 0.3261, 0.3261], [0.2283, 0.2283, 0.2283])
+Augmentation pipeline created:
+{'train_transform': Compose(
+    <Medino.dino_utils.basic_transform.ToTensor object at 0x000001C23C5EA460>
+    <Medino.dino_utils.basic_transform.RandomSelect object at 0x000001C23C5EAD00>
+    <Medino.dino_utils.basic_transform.Resize object at 0x000001C23C5EAF40>
+    <Medino.dino_utils.basic_transform.DinoAug object at 0x000001C23C643580>
+), 'knn_transform': Compose(
+    <Medino.dino_utils.basic_transform.ToTensor object at 0x000001C23C643850>
+    <Medino.dino_utils.basic_transform.Resize object at 0x000001C23C6431C0>
+    <Medino.dino_utils.basic_transform.DinoAug object at 0x000001C23C6433A0>
+)}
+
+*** Dataset Details ***
+Length of Dataset:
+DINO_train: 284
+KNN_train: 302
+KNN_val: 283
+
