@@ -84,7 +84,7 @@ Frame-level annotations include 585 images categorized into three severity level
    │   ├── video_list.csv (already included)
    └── img
     ```
-4. **Run the **
+4. **Running the test scripts**
 
    All runnable scripts are located in the `MeDiVLAD/Medino/` directory. Below are the descriptions of the main scripts and their purposes:
    
@@ -93,6 +93,8 @@ Frame-level annotations include 585 images categorized into three severity level
    | `dino_train.py`    | Performs DINO self-distillation. Uses KNN as a classifier to evaluate accuracy. |
    | `lus_image_cls.py` | Fine-tunes the distilled DINO teacher.                                          |
    | `lus_video_cls.py` | For video-level scoring.                                                        |
+   <span style="color:red; font-size:11px;"> Don't forget to modify the data path in the script. Please follow the comments in the script.</span>
+
 
 5. **Checkpoint Description**
 
