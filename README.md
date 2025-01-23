@@ -94,7 +94,7 @@ Frame-level annotations include 585 images categorized into three severity level
    | `lus_image_cls.py` | Fine-tunes the distilled DINO teacher.                                          |
    | `lus_video_cls.py` | For video-level scoring.                                                        |
    
-   <span style="color:red; font-size:11px;"> Don't forget to modify the data path in the script. Please follow the comments in the script.</span>
+   🟥 Don't forget to modify the data path in the script. Please follow the comments in the script.
 
 
 5. **Checkpoint Description**
