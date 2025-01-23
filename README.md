@@ -8,7 +8,8 @@ This repository contains the official implementation of the paper **"Efficient L
 
 ## Timeline
 
-- **2025-01-02**: Accepted by **IEEE International Symposium on Biomedical Imaging [(ISBI)](https://biomedicalimaging.org/2025/) 2025** 🎉🎉🎉.
+- **2025-01-02**: Accepted by **IEEE International Symposium on Biomedical Imaging [(ISBI)](https://biomedicalimaging.org/2025/) 2025** 🎉🎉.
+- **2025-01-23**: Our paper (Camera Ready Version) is now avaliable on **[arXiv](https://arxiv.org/abs/2501.12524)** 🎉🎉.
 
 ## Abstract
 
@@ -83,7 +84,7 @@ Frame-level annotations include 585 images categorized into three severity level
    │   ├── video_list.csv (already included)
    └── img
     ```
-4. **To make everything SIMPLE**
+4. **Run the **
 
    All runnable scripts are located in the `MeDiVLAD/Medino/` directory. Below are the descriptions of the main scripts and their purposes:
    
@@ -104,3 +105,20 @@ Frame-level annotations include 585 images categorized into three severity level
    | backbone/VAL_F2_dino_acc_8481.pth         | N/A   | ~84% | fine-tuned on fold 2              |
    | video_cls/VAL_F1_dino_acc_8357.pth        | N/A   | ~83% | Video-level scoring on fold 1     |
    | video_cls/VAL_F2_dino_acc_8162.pth        | N/A   | ~81% | Video-level scoring on fold 2     |
+
+### 📖 Citing This Work
+If you find this code useful in your research, please consider citing our paper: 
+
+*(We will update this arxiv reference after the official publication of the paper)*
+
+```bibtex
+@misc{guo2025efficientlungultrasoundseverity,
+      title={Efficient Lung Ultrasound Severity Scoring Using Dedicated Feature Extractor}, 
+      author={Jiaqi Guo and Yunnan Wu and Evangelos Kaimakamis and Georgios Petmezas and Vasileios E. Papageorgiou and Nicos Maglaveras and Aggelos K. Katsaggelos},
+      year={2025},
+      eprint={2501.12524},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2501.12524}, 
+}
+```
