@@ -1,0 +1,11 @@
+fold: 2
+local_crops_number: 10  # Number of local crops.
+dino_out_dim: 65536  # Output dimension for the DINO head.
+warmup_teacher_temp: 0.04  # Warmup temperature for the teacher.
+teacher_temp: 0.06  # Final temperature for the teacher network.
+init_momentum: 0.998  # Initial momentum value for the teacher network.
+warmup_teacher_temp_epochs: 5  # Epochs to warm up the teacher temperature.
+load_pretrained_backbone: true  # Whether to load a pre-trained backbone model.
+model_type: 'small'  # Model type to use (options: tiny, small, base, vit_tinyer).
+checkpoint: 'dino_deitsmall8_pretrain_full_checkpoint'
+

@@ -1,0 +1,6 @@
+/data/*/*.npy
+/data/*/*.avi
+/data/*/*.png
+/dino_checkpoint/
+/Medino/centroid
+Medino/trained_model/
