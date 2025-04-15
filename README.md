@@ -1,6 +1,6 @@
 # MeDiVLAD: Efficient Lung Ultrasound Severity Scoring
 
-<div align="center">
+<div "center">
   <img src="img/overall_LUS_STRUCTURE.png" alt="Overall LUS Structure" width="1000">
 </div>
 
