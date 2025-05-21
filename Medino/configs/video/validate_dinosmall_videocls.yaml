@@ -21,4 +21,4 @@ checkpoint: 'VAL_F1_dino_acc_8357.pth'
 fold: 1
 # Don't forget to change the fold accordingly (2-fold validation)
 
-vlad_centroid: centroid_VAL_F1_dino_acc_8013.pt
+vlad_centroid: F1_VLAD_8286_Centroid.pt
