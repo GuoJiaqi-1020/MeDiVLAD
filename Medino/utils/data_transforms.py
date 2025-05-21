@@ -8,7 +8,6 @@ import torchvision.transforms.functional as transforms
 import kornia.augmentation as K
 from pytorchvideo.transforms.functional import uniform_temporal_subsample
 import torch
-import cv2
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -200,36 +199,6 @@ class ColorJiggle(BaseTranformation):
     def __call__(self, input_dict: Dict[str, np.ndarray]):
         for k in self.keys:
             input_dict[k] = self.transform(input_dict[k])
-        return input_dict
-
-
-class CenterRescale(BaseTranformation):
-    def __init__(self, p, rescale_factor, keys: List[str]):
-        self.ky = False
-        dice = random.random()
-        if dice <= p:
-            self.ky = True
-        self.rescale_factor = rescale_factor
-        super().__init__(keys)
-
-    def get_params(self, x: np.ndarray):
-        h, w = x.shape[-2], x.shape[-1]
-        th, tw = int(h * self.enlarge), int(w * self.enlarge),
-        i, j = (h - th) // 2, (w - tw) // 2
-        if i + th > x.shape[-2] or j + tw > x.shape[-1]:
-            return i, j, x.shape[-2], x.shape[-1]
-        return i, j, i + th, j + tw
-
-    def __call__(self, input_dict: Dict[str, np.ndarray]):
-        self.enlarge = 1 - np.random.choice(self.rescale_factor) / 100
-        x = input_dict[self.keys[0]]
-        i, j, h, w = self.get_params(x)
-        if self.ky:
-            for k in self.keys:
-                new_img = np.squeeze(input_dict[k][..., i:h, j:w], 0)
-                input_dict[k] = cv2.resize(new_img, x.shape[1:], interpolation=cv2.INTER_LINEAR)[np.newaxis, :]
-        else:
-            pass
         return input_dict
 
 

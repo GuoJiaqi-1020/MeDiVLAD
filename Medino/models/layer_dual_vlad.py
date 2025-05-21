@@ -29,8 +29,9 @@ class DualVLAD(nn.Module):
         if centroids is not None:
             try:
                 self.centroids = nn.Parameter(torch.load(f'./centroid/{centroids}'))
+                print(f'Centroids loaded from {centroids}')
             except:
-                pass
+                print(f'Centroids not loaded from {centroids}')
 
         self.V = torch.nn.Sequential(
             torch.nn.Linear(dim * self.num_clusters, dim * self.num_clusters),
