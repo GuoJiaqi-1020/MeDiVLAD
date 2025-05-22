@@ -348,7 +348,6 @@ if __name__ == '__main__':
 
     training_set = LUS_Videoset(DATA_PATH, train_list, transform=train_transform)
     val_set = LUS_Videoset(DATA_PATH, val_list, transform=val_transform)
-    vlad_set = LUS_Videoset(DATA_PATH, train_list, transform=val_transform)
 
     Medino.log(f'Length of validation set: {len(val_set)}')
     Medino.log(f'Length of training set: {len(training_set)}')
@@ -363,9 +362,6 @@ if __name__ == '__main__':
         num_workers=12, pin_memory=True)
     ValLoader = DataLoader(
         val_set, batch_size=2, drop_last=True,
-        num_workers=12, pin_memory=True)
-    VladLoader = DataLoader(
-        vlad_set, batch_size=1, drop_last=True,
         num_workers=12, pin_memory=True)
 
     Medino.train_classifier(
