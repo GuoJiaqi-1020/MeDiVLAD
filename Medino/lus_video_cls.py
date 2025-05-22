@@ -95,7 +95,6 @@ class MediVLAD_Train(Training_base):
             dropout=args.dropout,
             input_size=args.input_size,
             hidden_size=args.hidden_size,
-            vlad_centroid=args.vlad_centroid,
             num_layers=1,
         ).to(device)
 
@@ -121,7 +120,7 @@ class MediVLAD_Train(Training_base):
     def load_model_checkpoint(self, checkpoint_path: str):
         """Loads model and optimizer states from a checkpoint."""
         try:
-            checkpoint = torch.load(f'{root}/{checkpoint_path}', map_location=device)
+            checkpoint = torch.load(f'{root}/{checkpoint_path}')
             self.log(f'\n### State dict found, Loading...')
             self.model.load_state_dict(checkpoint['model_state_dict'], strict=False)
 
